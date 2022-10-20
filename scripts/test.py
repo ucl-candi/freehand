@@ -5,11 +5,11 @@ from matplotlib import pyplot as plt
 import torch
 from torchvision.models import efficientnet_b1
 
-from loader import SSFrameDataset
-from network import build_model
+from freehand.loader import SSFrameDataset
+from freehand.network import build_model
 from data.calib import read_calib_matrices
-from transform import LabelTransform, TransformAccumulation, ImageTransform
-from utils import pair_samples, reference_image_points, type_dim
+from freehand.transform import LabelTransform, TransformAccumulation, ImageTransform
+from freehand.utils import pair_samples, reference_image_points, type_dim
 
 
 os.environ["CUDA_VISIBLE_DEVICES"]="0"

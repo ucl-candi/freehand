@@ -1,8 +1,8 @@
 
 import os
 
-from fileio import read_json_points
-from metric import frame_volume_overlap
+from freehand.fileio import read_json_points
+from freehand.metric import frame_volume_overlap
 
 # load ground-truth and predicted point sets
 foldername = os.path.join(os.path.expanduser('~/'),'Scratch/overlap/testing_val_results')
