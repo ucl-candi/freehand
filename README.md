@@ -8,4 +8,4 @@ The link to the data used in the following papers will be made available here up
 
 "Qi et al. Trackerless freehand ultrasound with sequence modelling and auxiliary transformation over past and future frames" 
 
-"Qi et al. The curious case of long-term dependency for 3D reconstruction of freehand ultrasound without external tracker" 
+"Qi et al. Long-term Dependency for 3D Reconstruction of Freehand Ultrasound Without External Tracker" 
