@@ -4,7 +4,7 @@ This repository contains algorithms to train deep neural networks, using scans o
 
 The most up-to-date code is in the `dev0` branch, where the `train.py` and `test.py` under the `scripts` folder can be adapted with local data path. The conda environment required to run the code is detailed in [requirements](/doc/requirements.md).
 
-The link to the data used in the following papers will be made available here upon publication (due to local regulatory requirement).
+The data used in the following papers can be downloaded [here](https://doi.org/10.5281/zenodo.7740734).
 
 "Qi et al. Trackerless freehand ultrasound with sequence modelling and auxiliary transformation over past and future frames" 
 
