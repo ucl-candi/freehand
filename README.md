@@ -3,10 +3,86 @@
 This repository contains algorithms to train deep neural networks, using scans of freehand ultrasound image frames acquired with ground-truth frame locations from external spatial trackers. The aim is to reconstruct the spatial frame locations or relative transformation between them, on the newly acquired scans.
 
 The most up-to-date code is in the `dev1` branch, where the `train.py` and `test.py` under the `scripts` folder can be adapted with local data path. 
-<!-- The conda environment required to run the code is detailed in [requirements](/doc/requirements.md). -->
 
-The data used in the following papers can be downloaded [here](https://doi.org/10.5281/zenodo.7740734).
+
+The data can be downloaded [here](https://doi.org/10.5281/zenodo.7740734).
 We have collected a new large freehand ultrasound dataset and are organising a MICCAI2024 Challenge [TUS-REC Challenge](https://github-pages.ucl.ac.uk/tus-rec-challenge/). Check [Part 1](https://zenodo.org/records/11178509) and [Part 2](https://zenodo.org/records/11180795) of the training dataset. 
+
+
+## Steps to run the code
+### 1. Clone the repository.
+```
+git clone https://github.com/ucl-candi/freehand.git
+```
+
+### 2. Navigate to the root directory.
+```
+cd freehand
+```
+
+### 3. Switch to dev1.
+```
+git checkout dev1
+```
+
+### 4. Install conda environment
+
+``` bash
+conda create -n FUS python=3.9.13
+conda activate FUS
+pip install -r requirements.txt
+```
+
+<!-- ### 5. Create directories.
+```
+mkdir -p data/Freehand_US_data
+``` -->
+
+
+### 5. Download data and put `Freehand_US_data.zip` into `./data` directory. (You may need to install `zenodo_get`)
+
+```
+pip3 install zenodo_get
+zenodo_get 7740734
+mv Freehand_US_data.zip ./data
+```
+
+### 6. Unzip.
+Unzip `Freehand_US_data.zip` into `./data/Freehand_US_data` directory.
+
+```
+unzip data/Freehand_US_data.zip -d ./data
+```
+### 7. Make sure the data folder structure is the same as follows.
+```bash
+├── data/ 
+│ ├── Freehand_US_data/ 
+│  ├── 000/
+│    ├── *.mha
+│    ├── ...
+│  ├── ...
+│  ├── 018/ 
+```
+
+### 8. Data processing (Generate one `.h5` file, using downloaded `.mha` files)
+
+```
+python data/prep.py
+```
+
+### 9. Train model
+
+```
+python scripts/train.py
+```
+
+
+### 10. Test model
+
+```
+python scripts/test.py
+```
+
 
 If you find this code or data set useful for your research, please consider citing the following works:
 
