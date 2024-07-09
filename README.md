@@ -51,7 +51,7 @@ mv Freehand_US_data.zip ./data
 Unzip `Freehand_US_data.zip` into `./data/Freehand_US_data` directory.
 
 ```
-unzip data/Freehand_US_data.zip -d data/Freehand_US_data
+unzip data/Freehand_US_data.zip -d ./data
 ```
 ### 7. Make sure the data folder structure is the same as follows.
 ```bash
