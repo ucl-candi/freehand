@@ -20,7 +20,7 @@ git clone https://github.com/ucl-candi/freehand.git
 cd freehand
 ```
 
-### 3. Check out to dev1.
+### 3. Switch to dev1.
 ```
 git checkout dev1
 ```
@@ -64,7 +64,7 @@ unzip data/Freehand_US_data.zip -d ./data
 │  ├── 018/ 
 ```
 
-### 8. Generate one `.h5` file, using downloaded `.mha` files
+### 8. Data processing (Generate one `.h5` file, using downloaded `.mha` files)
 
 ```
 python data/prep.py
