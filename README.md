@@ -5,7 +5,7 @@ This repository contains algorithms to train deep neural networks, using scans o
 The most up-to-date code is in the `dev1` branch, where the `train.py` and `test.py` under the `scripts` folder can be adapted with local data path. 
 
 
-The data used in the following papers can be downloaded [here](https://doi.org/10.5281/zenodo.7740734).
+The data can be downloaded [here](https://doi.org/10.5281/zenodo.7740734).
 We have collected a new large freehand ultrasound dataset and are organising a MICCAI2024 Challenge [TUS-REC Challenge](https://github-pages.ucl.ac.uk/tus-rec-challenge/). Check [Part 1](https://zenodo.org/records/11178509) and [Part 2](https://zenodo.org/records/11180795) of the training dataset. 
 
 
@@ -22,7 +22,7 @@ cd freehand
 
 ### 3. Check out to dev1.
 ```
-git clocheckout dev1
+git checkout dev1
 ```
 
 ### 4. Install conda environment
