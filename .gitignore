@@ -1,5 +1,8 @@
 results/
 Freehand_US_data/
+Freehand_US_data.zip
+*.txt
+calib_matrix.csv
 
 
 # Byte-compiled / optimized / DLL files

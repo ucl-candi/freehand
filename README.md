@@ -44,6 +44,7 @@ mkdir -p data/Freehand_US_data
 ```
 pip3 install zenodo_get
 zenodo_get 7740734
+mv Freehand_US_data.zip /data
 ```
 
 ### 7. Unzip.
