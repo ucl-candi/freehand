@@ -1,3 +1,7 @@
+results/
+Freehand_US_data/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -8,9 +12,9 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-.idea/
-
 build/
+.idea/
+.git/
 develop-eggs/
 dist/
 downloads/
