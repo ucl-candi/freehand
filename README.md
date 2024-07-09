@@ -33,25 +33,35 @@ conda activate FUS
 pip install -r requirements.txt
 ```
 
-### 5. Create directories.
+<!-- ### 5. Create directories.
 ```
 mkdir -p data/Freehand_US_data
-```
+``` -->
 
 
-### 6. Download data and put `Freehand_US_data.zip` into `./data` directory. (You may need to install `zenodo_get`)
+### 5. Download data and put `Freehand_US_data.zip` into `./data` directory. (You may need to install `zenodo_get`)
 
 ```
 pip3 install zenodo_get
 zenodo_get 7740734
-mv Freehand_US_data.zip /data
+mv Freehand_US_data.zip ./data
 ```
 
-### 7. Unzip.
+### 6. Unzip.
 Unzip `Freehand_US_data.zip` into `./data/Freehand_US_data` directory.
 
 ```
 unzip data/Freehand_US_data.zip -d data/Freehand_US_data
+```
+### 7. Make sure the data folder structure is the same as follows.
+```bash
+├── data/ 
+│ ├── Freehand_US_data/ 
+│  ├── 000/
+│    ├── *.mha
+│    ├── ...
+│  ├── ...
+│  ├── 018/ 
 ```
 
 ### 8. Generate one `.h5` file, using downloaded `.mha` files
