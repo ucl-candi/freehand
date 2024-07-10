@@ -2,7 +2,7 @@
 
 This repository contains algorithms to train deep neural networks, using scans of freehand ultrasound image frames acquired with ground-truth frame locations from external spatial trackers. The aim is to reconstruct the spatial frame locations or relative transformation between them, on the newly acquired scans.
 
-The most up-to-date code is in the `dev1` branch, where the `train.py` and `test.py` under the `scripts` folder can be adapted with local data path. 
+<!-- The most up-to-date code is in the `dev1` branch, where the `train.py` and `test.py` under the `scripts` folder can be adapted with local data path.  -->
 
 
 The data can be downloaded [here](https://doi.org/10.5281/zenodo.7740734).
@@ -20,12 +20,12 @@ git clone https://github.com/ucl-candi/freehand.git
 cd freehand
 ```
 
-### 3. Switch to dev1.
+<!-- ### 3. Switch to dev1.
 ```
 git checkout dev1
-```
+``` -->
 
-### 4. Install conda environment
+### 3. Install conda environment
 
 ``` bash
 conda create -n FUS python=3.9.13
@@ -39,7 +39,7 @@ mkdir -p data/Freehand_US_data
 ``` -->
 
 
-### 5. Download data and put `Freehand_US_data.zip` into `./data` directory. (You may need to install `zenodo_get`)
+### 4. Download data and put `Freehand_US_data.zip` into `./data` directory. (You may need to install `zenodo_get`)
 
 ```
 pip3 install zenodo_get
@@ -47,13 +47,13 @@ zenodo_get 7740734
 mv Freehand_US_data.zip ./data
 ```
 
-### 6. Unzip.
+### 5. Unzip.
 Unzip `Freehand_US_data.zip` into `./data/Freehand_US_data` directory.
 
 ```
 unzip data/Freehand_US_data.zip -d ./data
 ```
-### 7. Make sure the data folder structure is the same as follows.
+### 6. Make sure the data folder structure is the same as follows.
 ```bash
 ├── data/ 
 │ ├── Freehand_US_data/ 
@@ -64,20 +64,20 @@ unzip data/Freehand_US_data.zip -d ./data
 │  ├── 018/ 
 ```
 
-### 8. Data processing (Generate one `.h5` file, using downloaded `.mha` files)
+### 7. Data processing (Generate one `.h5` file, using downloaded `.mha` files)
 
 ```
 python data/prep.py
 ```
 
-### 9. Train model
+### 8. Train model
 
 ```
 python scripts/train.py
 ```
 
 
-### 10. Test model
+### 9. Test model
 
 ```
 python scripts/test.py
