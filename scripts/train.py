@@ -63,8 +63,8 @@ dset_folds = dataset_all.partition_by_ratio(
 for (idx, ds) in enumerate(dset_folds):
     ds.write_json(os.path.join(SAVE_PATH,"fold_{:02d}.json".format(idx)))  # see test.py for file reading
 
-dset_train = dset_folds[0]+dset_folds[1]+dset_folds[2]+dset_folds[3]
-dset_val = dset_folds[4]
+dset_train = dset_folds[0]+dset_folds[1]+dset_folds[2]
+dset_val = dset_folds[3]
 
 train_loader = torch.utils.data.DataLoader(
     dset_train,
